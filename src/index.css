@@ -128,56 +128,41 @@ body {
 }
 
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	--clr: 45;
-	--clr-principal: hsl(var(--clr), 100%, 5%);
-	--clr-secondary: hsl(var(--clr), 100%, 50%);
-	--clr-tertiary: hsl(var(--clr), 0%, 98%);
+	font-family: "General Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+		sans-serif;
 
-	--clr-secondary-bright: hsl(var(--clr), 100%, 70%);
-	--clr-tertiary-bright: hsl(var(--clr), 100%, 100%);
-
-	--clr-secondary-dark: hsl(var(--clr), 100%, 35%);
-	--clr-tertiary-dark: hsl(var(--clr), 0%, 92%);
-
-	--clr-accept: hsl(151, 100%, 65%);
+	--clr-black: hsl(214, 31%, 20%);
+	--clr-light-black: hsl(213, 28%, 37%);
+	--clr-dark-white: hsl(213, 15%, 95%);
+	--clr-light-white: hsl(213, 15%, 98%);
+	--clr-principal: hsl(0, 80%, 65%);
 
 	--little-shadow: 3px 3px 5px hsl(0, 0%, 0%, 0.2);
-	--medium-shadow: 5px 5px 5px hsl(0, 0%, 0%, 0.2);
+	--mid-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
 	--big-shadow: 10px 10px 5px hsl(0, 0%, 0%, 0.2);
 
-	--radius: 10%;
+	--radius: 1rem;
 
-	color: var(--clr-principal);
-	background-color: var(--clr-tertiary);
+	color: var(--clr-black);
+	background-color: var(--clr-dark-white);
 }
 
 body {
 	max-width: 100dvw;
 	min-height: 100dvh;
-	header {
-	}
-	main {
-	}
-	footer {
-	}
 	* {
-		div {
-			background-color: var(--clr-tertiary-bright);
-			box-shadow: var(--medium-shadow);
-		}
 		button {
-			color: var(--clr-principal);
-			background-color: var(--clr-tertiary-dark);
 			padding: 0.5rem 1rem;
 			margin: 0.5rem;
 			font-size: 1rem;
+			border: 0;
 		}
-		button:hover {
-			outline: 2px solid var(--clr-principal);
+		svg {
+			fill: var(--clr-black);
 		}
-		.savedBtn {
-			background: var(--clr-accept);
-		}
+	}
+	#root {
+		min-height: inherit;
+		max-width: inherit;
 	}
 }
