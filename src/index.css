@@ -128,14 +128,15 @@ body {
 }
 
 :root {
-	font-family: "General Sans", Inter, system-ui, Avenir, Helvetica, Arial,
-		sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 
-	--clr-black: hsl(214, 31%, 20%);
-	--clr-light-black: hsl(213, 28%, 37%);
+	--clr-black: hsl(214, 31%, 12%);
+	--clr-light-black: hsl(213, 31%, 20%);
+	--clr-ultra-light-black: hsl(213, 10%, 44%);
 	--clr-dark-white: hsl(213, 15%, 95%);
 	--clr-light-white: hsl(213, 15%, 98%);
-	--clr-principal: hsl(0, 80%, 65%);
+	--clr-principal: hsl(214, 90%, 51%);
+	--clr-light-principal: hsl(214, 90%, 70%);
 
 	--little-shadow: 3px 3px 5px hsl(0, 0%, 0%, 0.2);
 	--mid-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
@@ -156,13 +157,27 @@ body {
 			margin: 0.5rem;
 			font-size: 1rem;
 			border: 0;
+			cursor: pointer;
 		}
 		svg {
 			fill: var(--clr-black);
+			height: 3rem;
 		}
 	}
 	#root {
 		min-height: inherit;
 		max-width: inherit;
 	}
+}
+.end-section {
+	position: absolute;
+	height: 5rem;
+	bottom: 0;
+	left: 0;
+	fill: var(--clr-ultra-light-black);
+	transform: rotateZ(45deg);
+}
+.section {
+	min-height: inherit;
+	max-width: inherit;
 }
