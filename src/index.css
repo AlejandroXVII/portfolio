@@ -181,3 +181,41 @@ body {
 	min-height: inherit;
 	max-width: inherit;
 }
+
+.header {
+	position: fixed;
+	display: flex;
+	min-width: 100vw;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	gap: 4rem;
+	transform: translateY(0);
+	transition: transform 0.3s ease-in-out;
+	img {
+		height: 3rem;
+	}
+	ul {
+		display: flex;
+		gap: 1.5rem;
+		font-size: 1.3rem;
+		box-shadow: var(--mid-shadow);
+
+		padding: 1rem 2rem;
+		border-radius: 100px;
+		background-color: var(--clr-light-white);
+		li {
+			a {
+				text-decoration: none;
+				color: var(--clr-light-black);
+				font-weight: 800;
+				position: relative;
+			}
+		}
+	}
+}
+
+.header.hide {
+	transform: translateY(-100px);
+	transition: transform 0.3s ease-in-out;
+}

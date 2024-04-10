@@ -4,32 +4,7 @@ import "../styles/hero.css";
 const Hero = () => {
 	return (
 		<div className="hero-section section">
-			<Header />
 			<Content />
-		</div>
-	);
-};
-
-const Header = () => {
-	return (
-		<div className="header">
-			<ul>
-				<li>
-					<a href="">Projects</a>
-				</li>
-				<li>
-					<a href="">About</a>
-				</li>
-				<li>
-					<a href="">Skills</a>
-				</li>
-				<li>
-					<a href="">Contact</a>
-				</li>
-				<li>
-					<a href="">Resume</a>
-				</li>
-			</ul>
 		</div>
 	);
 };
