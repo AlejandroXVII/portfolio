@@ -1,14 +1,23 @@
 import "../styles/hero.css";
 
-const Hero = () => {
+const Hero = (prop) => {
 	return (
 		<div className="hero-section section">
-			<Content />
+			<Content contactRef={prop.contactRef} />
 		</div>
 	);
 };
 
-const Content = () => {
+const Content = (prop) => {
+	const onButtonClick = () => {
+		const pdfUrl = "../assets/cv.pdf";
+		const link = document.createElement("a");
+		link.href = pdfUrl;
+		link.download = "cv.pdf";
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
 	return (
 		<div className="hero-content">
 			<div>
@@ -26,8 +35,18 @@ const Content = () => {
 				natural problem solver, and apasonet to keep inpruving my skills
 			</p>
 			<div className="call-to-action">
-				<button>Contact me</button>
-				<button>Download CV</button>
+				<button
+					onClick={(e) => {
+						e.preventDefault();
+						window.scrollTo({
+							top: prop.contactRef.current.offsetTop,
+							behavior: "smooth",
+						});
+					}}
+				>
+					Contact me
+				</button>
+				<button onClick={onButtonClick}>Download CV</button>
 			</div>
 			<ul className="links">
 				<li>
@@ -35,13 +54,15 @@ const Content = () => {
 				</li>
 				<ul>
 					<li>
-						<a href="">Github</a>
+						<a href="https://github.com/AlejandroXVII">Github</a>
 					</li>
 					<li>
-						<a href="">LinkedIn</a>
+						<a href="https://www.linkedin.com/in/manuel-alejandro-hernandez-211595193/">
+							LinkedIn
+						</a>
 					</li>
 					<li>
-						<a href="">Email</a>
+						<a href="mailto:m.alejandro.xvii@gmail.com">Email</a>
 					</li>
 				</ul>
 			</ul>

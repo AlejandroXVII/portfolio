@@ -1,8 +1,8 @@
 import "../styles/projects.css";
 
-const Projects = () => {
+const Projects = (prop) => {
 	return (
-		<div className="projects-section section">
+		<div className="projects-section section" ref={prop.projectsRef}>
 			<h1 className="tittle">
 				<span className="number">01.</span>Projects
 			</h1>

@@ -1,10 +1,16 @@
 import Hero from "./sections/hero";
 import Projects from "./sections/projects";
 import Skills from "./sections/skills";
-import { useState, useEffect, useCallback } from "react";
+import ContactMe from "./sections/contact-me";
+import { useState, useEffect, useCallback, useRef } from "react";
+import cv from "./assets/cv.pdf";
+
 const App = () => {
 	const [y, setY] = useState(window.scrollY);
 	const [showMenu, setShowMenu] = useState(true);
+	const projectsRef = useRef(null);
+	const skillsRef = useRef(null);
+	const contactRef = useRef(null);
 
 	//Function that help to hide and show the menu onScroll
 	const handleNavigation = useCallback(
@@ -30,10 +36,16 @@ const App = () => {
 	}, [handleNavigation]);
 	return (
 		<>
-			<Header showMenu={showMenu} />
-			<Hero />
-			<Projects />
-			<Skills />
+			<Header
+				showMenu={showMenu}
+				skillsRef={skillsRef}
+				contactRef={contactRef}
+				projectsRef={projectsRef}
+			/>
+			<Hero contactRef={contactRef} />
+			<Projects projectsRef={projectsRef} />
+			<Skills skillsRef={skillsRef} />
+			<ContactMe contactRef={contactRef} />
 		</>
 	);
 };
@@ -43,19 +55,54 @@ const Header = (prop) => {
 		<div className={prop.showMenu ? "header show" : "header hide"}>
 			<ul>
 				<li>
-					<a href="">Projects</a>
+					<a
+						href=""
+						onClick={(e) => {
+							e.preventDefault();
+							window.scrollTo({
+								top: prop.projectsRef.current.offsetTop,
+								behavior: "smooth",
+							});
+						}}
+					>
+						Projects
+					</a>
 				</li>
 				<li>
 					<a href="">About</a>
 				</li>
 				<li>
-					<a href="">Skills</a>
+					<a
+						href=""
+						onClick={(e) => {
+							e.preventDefault();
+							window.scrollTo({
+								top: prop.skillsRef.current.offsetTop,
+								behavior: "smooth",
+							});
+						}}
+					>
+						Skills
+					</a>
 				</li>
 				<li>
-					<a href="">Contact</a>
+					<a
+						href=""
+						onClick={(e) => {
+							e.preventDefault();
+							window.scrollTo({
+								top: prop.contactRef.current.offsetTop,
+								behavior: "smooth",
+							});
+						}}
+					>
+						Contact
+					</a>
 				</li>
 				<li>
-					<a href="">Resume</a>
+					<a href={cv} download="cv">
+						Resume
+					</a>
 				</li>
 			</ul>
 		</div>

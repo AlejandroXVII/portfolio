@@ -1,8 +1,8 @@
 import "../styles/skills.css";
 
-const Skills = () => {
+const Skills = (prop) => {
 	return (
-		<div className="skills-section section">
+		<div className="skills-section section" ref={prop.skillsRef}>
 			<h1 className="tittle">
 				<span className="number">03.</span>Skills
 			</h1>

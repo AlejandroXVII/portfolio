@@ -1,0 +1,142 @@
+.contact-me-section {
+	--clr-error: rgb(244, 33, 46);
+	display: grid;
+	grid-template-rows: auto 1fr;
+	ul {
+		li {
+			font-size: 1.5rem;
+		}
+	}
+}
+.contact-me-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 3rem;
+}
+
+.contact-me-container form {
+	display: flex;
+	flex-flow: column;
+	justify-items: center;
+	justify-content: center;
+	gap: 1rem;
+	max-width: 500px;
+	input {
+		margin-top: 1.5rem;
+
+		height: 1.25rem;
+		border: none;
+		width: 100%;
+		background: transparent;
+		overflow: hidden;
+	}
+	input:hover,
+	input:focus {
+		outline: none;
+	}
+	.input-container:not(:has(:placeholder-shown)) {
+		label {
+			transform: translateY(0) scale(0.85);
+			left: 1rem;
+		}
+	}
+	.input-container:has(input.bad-input) {
+		border-color: var(--clr-error);
+	}
+	.input-container:focus-within:has(input.bad-input) {
+		outline-color: var(--clr-error);
+	}
+	.input-container {
+		padding: 0.5rem 1rem;
+		border: 1px solid var(--clr-ultra-light-black);
+		border-radius: 0.25rem;
+		position: relative;
+		overflow: hidden;
+		background-color: var(--clr-light-white);
+	}
+	.input-container:focus-within {
+		outline: 2px solid var(--clr-principal);
+		label {
+			color: var(--clr-principal);
+			transform: translateY(0) scale(0.85);
+			left: 1rem;
+		}
+	}
+	label {
+		color: var(--clr-light-black);
+		position: absolute;
+
+		left: 1rem;
+		transform: translateY(80%) scale(1);
+		transition: transform 0.25s ease-in-out;
+		transform-origin: left;
+	}
+	button {
+		font-size: 1.3rem;
+		background-color: var(--clr-principal);
+		color: var(--clr-light-white);
+		padding: 1rem 2.5rem;
+		align-self: start;
+	}
+}
+
+.info {
+	background-color: #18272f;
+	ul.links {
+		filter: invert();
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		gap: 1.5rem;
+		font-size: 3rem;
+		margin: 4rem 3rem;
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-items: end;
+			gap: 0.5rem;
+
+			a {
+				text-decoration: none;
+				color: var(--clr-light-black);
+				position: relative;
+			}
+			a:hover,
+			a:focus {
+				color: var(--clr-black);
+			}
+			a::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 4px;
+				border-radius: 4px;
+				background-color: #18272f;
+				bottom: -3px;
+				left: 0;
+				transform-origin: right;
+				transform: scaleX(0);
+				transition: transform 0.3s ease-in-out;
+			}
+
+			a:hover::before {
+				transform-origin: left;
+				transform: scaleX(1);
+			}
+		}
+		li:first-child {
+			justify-self: start;
+			display: flex;
+			justify-content: start;
+			left: 0;
+		}
+
+		ul {
+			display: flex;
+			flex-flow: row;
+			gap: 1.5rem;
+		}
+	}
+}
