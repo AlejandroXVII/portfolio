@@ -11,6 +11,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@emailjs/browser": "^4.3.3",
 		"@smakss/react-scroll-direction": "^4.1.0",
 		"prop-types": "^15.8.1",
 		"react": "^18.2.0",

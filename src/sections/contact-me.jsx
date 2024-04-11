@@ -1,6 +1,27 @@
 import "../styles/contact-me.css";
 import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 const ContactMe = (prop) => {
+	const form = useRef(null);
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm("service_y19shdq", "template_r982c1p", form.current, {
+				publicKey: "u-eHBJ6EyEgFgR_bC",
+			})
+			.then(
+				() => {
+					console.log("SUCCESS!");
+				},
+				(error) => {
+					console.log("FAILED...", error.text);
+				}
+			);
+		e.target.reset();
+		alert("Your message was successfully sent");
+	};
 	return (
 		<div className="contact-me-section section" ref={prop.contactRef}>
 			<h1 className="tittle">
@@ -44,11 +65,11 @@ const ContactMe = (prop) => {
 						</li>
 					</ul>
 				</div>
-				<form action="">
+				<form ref={form} onSubmit={sendEmail}>
 					<InputComponent>
 						<label htmlFor="text">Name</label>
 						<input
-							name="name"
+							name="from_name"
 							type="text"
 							required
 							placeholder=" "
@@ -57,7 +78,7 @@ const ContactMe = (prop) => {
 					<InputComponent>
 						<label htmlFor="text">Email</label>
 						<input
-							name="email"
+							name="from_email"
 							type="email"
 							required
 							placeholder=" "
