@@ -1,5 +1,6 @@
 import Hero from "./sections/hero";
 import Projects from "./sections/projects";
+import Skills from "./sections/skills";
 import { useState, useEffect, useCallback } from "react";
 const App = () => {
 	const [y, setY] = useState(window.scrollY);
@@ -32,6 +33,7 @@ const App = () => {
 			<Header showMenu={showMenu} />
 			<Hero />
 			<Projects />
+			<Skills />
 		</>
 	);
 };

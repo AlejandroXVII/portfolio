@@ -170,14 +170,6 @@ body {
 		max-width: inherit;
 	}
 }
-.end-section {
-	position: absolute;
-	height: 5rem;
-	bottom: 0;
-	left: 0;
-	fill: var(--clr-ultra-light-black);
-	transform: rotateZ(45deg);
-}
 .section {
 	min-height: inherit;
 	max-width: inherit;
