@@ -2,7 +2,7 @@ import "../styles/hero.css";
 
 const Hero = (prop) => {
 	return (
-		<div className="hero-section section">
+		<div className="hero-section section" ref={prop.aboutRef}>
 			<Content contactRef={prop.contactRef} />
 		</div>
 	);
@@ -30,9 +30,11 @@ const Content = (prop) => {
 			</div>
 
 			<p>
-				I&apos;m a full stack web developer with expiernce as a grafic
-				designer, I have been lerning about programing cince 2011, a
-				natural problem solver, and apasonet to keep inpruving my skills
+				I am a <b>full-stack</b> web developer with experience in{" "}
+				<b>graphic design.</b> I have been learning about programming
+				since 2011. As a natural problem solver, I am always focused on
+				improving and learning. If you find my profile interesting and
+				would like to collaborate, please feel free to contact me.
 			</p>
 			<div className="call-to-action">
 				<button
@@ -50,7 +52,9 @@ const Content = (prop) => {
 			</div>
 			<ul className="links">
 				<li>
-					<a href="">m.alejandro.xvii@gmail.com</a>
+					<a href="mailto:m.alejandro.xvii@gmail.com">
+						m.alejandro.xvii@gmail.com
+					</a>
 				</li>
 				<ul>
 					<li>

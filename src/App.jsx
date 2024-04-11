@@ -11,6 +11,7 @@ const App = () => {
 	const projectsRef = useRef(null);
 	const skillsRef = useRef(null);
 	const contactRef = useRef(null);
+	const aboutRef = useRef(null);
 
 	//Function that help to hide and show the menu onScroll
 	const handleNavigation = useCallback(
@@ -41,8 +42,9 @@ const App = () => {
 				skillsRef={skillsRef}
 				contactRef={contactRef}
 				projectsRef={projectsRef}
+				aboutRef={aboutRef}
 			/>
-			<Hero contactRef={contactRef} />
+			<Hero contactRef={contactRef} aboutRef={aboutRef} />
 			<Projects projectsRef={projectsRef} />
 			<Skills skillsRef={skillsRef} />
 			<ContactMe contactRef={contactRef} />
@@ -60,6 +62,20 @@ const Header = (prop) => {
 						onClick={(e) => {
 							e.preventDefault();
 							window.scrollTo({
+								top: prop.aboutRef.current.offsetTop,
+								behavior: "smooth",
+							});
+						}}
+					>
+						About
+					</a>
+				</li>
+				<li>
+					<a
+						href=""
+						onClick={(e) => {
+							e.preventDefault();
+							window.scrollTo({
 								top: prop.projectsRef.current.offsetTop,
 								behavior: "smooth",
 							});
@@ -68,9 +84,7 @@ const Header = (prop) => {
 						Projects
 					</a>
 				</li>
-				<li>
-					<a href="">About</a>
-				</li>
+
 				<li>
 					<a
 						href=""

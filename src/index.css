@@ -170,6 +170,7 @@ body {
 		max-width: inherit;
 	}
 }
+
 .section {
 	min-height: inherit;
 	max-width: inherit;
@@ -219,11 +220,12 @@ body {
 	span {
 		font-size: 1.8rem;
 	}
-	margin-bottom: 3rem;
+	margin: 3rem 0rem;
 }
 
 p {
 	font-size: 1.5rem;
 	color: var(--clr-light-black);
 	max-width: 75ch;
+	line-height: normal;
 }
