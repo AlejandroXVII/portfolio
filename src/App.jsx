@@ -5,14 +5,13 @@ const App = () => {
 	const [y, setY] = useState(window.scrollY);
 	const [showMenu, setShowMenu] = useState(true);
 
+	//Function that help to hide and show the menu onScroll
 	const handleNavigation = useCallback(
 		(e) => {
 			const window = e.currentTarget;
 			if (y > window.scrollY) {
-				console.log("scrolling up");
 				setShowMenu(true);
 			} else if (y < window.scrollY) {
-				console.log("scrolling down");
 				setShowMenu(false);
 			}
 			setY(window.scrollY);

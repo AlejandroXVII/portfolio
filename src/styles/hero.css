@@ -22,18 +22,15 @@
 	h1:last-child {
 		font-size: 3.5rem;
 	}
-	p {
-		font-size: 1.5rem;
-		color: var(--clr-light-black);
-		max-width: 75ch;
-	}
-	ul {
-		position: absolute;
+	ul.links {
+		position: fixed;
 		bottom: 2rem;
-		right: 3rem;
 		display: flex;
+		justify-content: space-between;
 		gap: 1.5rem;
 		font-size: 1.3rem;
+		min-width: 90vw;
+		margin: 0 3rem;
 		li {
 			a {
 				text-decoration: none;
@@ -62,6 +59,18 @@
 				transform-origin: left;
 				transform: scaleX(1);
 			}
+		}
+		li:first-child {
+			justify-self: start;
+			display: flex;
+			justify-content: start;
+			left: 0;
+		}
+
+		ul {
+			display: flex;
+			flex-flow: row;
+			gap: 1.5rem;
 		}
 	}
 	button {

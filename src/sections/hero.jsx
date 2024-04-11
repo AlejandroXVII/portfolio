@@ -1,4 +1,3 @@
-import EndSectionIcon from "../assets/end-section-icon";
 import "../styles/hero.css";
 
 const Hero = () => {
@@ -32,16 +31,20 @@ const Content = () => {
 			</div>
 			<ul className="links">
 				<li>
-					<a href="">Github</a>
+					<a href="">m.alejandro.xvii@gmail.com</a>
 				</li>
-				<li>
-					<a href="">LinkedIn</a>
-				</li>
-				<li>
-					<a href="">Email</a>
-				</li>
+				<ul>
+					<li>
+						<a href="">Github</a>
+					</li>
+					<li>
+						<a href="">LinkedIn</a>
+					</li>
+					<li>
+						<a href="">Email</a>
+					</li>
+				</ul>
 			</ul>
-			<EndSectionIcon />
 			<ul className="circles">
 				<li></li>
 				<li></li>
