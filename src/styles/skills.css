@@ -1,6 +1,6 @@
 .skills-section {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
 }
 .icon-container {
 	border: 3px dotted var(--clr-ultra-light-black);

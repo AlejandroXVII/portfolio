@@ -224,8 +224,20 @@ body {
 }
 
 p {
-	font-size: 1.5rem;
+	font-size: min(max(1.2rem, 2vw), 1.5rem);
 	color: var(--clr-light-black);
 	max-width: 75ch;
 	line-height: normal;
+}
+
+@media (max-width: 1060px) {
+	.section {
+		padding: 0 min(5rem, 3vw);
+	}
+}
+
+@media (max-width: 800px) {
+	.header {
+		transform: translateY(-100px);
+	}
 }

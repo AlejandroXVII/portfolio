@@ -12,10 +12,17 @@ const App = () => {
 	const skillsRef = useRef(null);
 	const contactRef = useRef(null);
 	const aboutRef = useRef(null);
+	const footerRef = useRef(null);
 
 	//Function that help to hide and show the menu onScroll
 	const handleNavigation = useCallback(
 		(e) => {
+			if (e.currentTarget.scrollY === 0) {
+				footerRef.current.className = "links show";
+			} else {
+				footerRef.current.className = "links hide";
+			}
+
 			const window = e.currentTarget;
 			if (y > window.scrollY) {
 				setShowMenu(true);
@@ -44,7 +51,11 @@ const App = () => {
 				projectsRef={projectsRef}
 				aboutRef={aboutRef}
 			/>
-			<Hero contactRef={contactRef} aboutRef={aboutRef} />
+			<Hero
+				contactRef={contactRef}
+				aboutRef={aboutRef}
+				footerRef={footerRef}
+			/>
 			<Projects projectsRef={projectsRef} />
 			<Skills skillsRef={skillsRef} />
 			<ContactMe contactRef={contactRef} />

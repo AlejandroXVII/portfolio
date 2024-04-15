@@ -3,7 +3,7 @@ import "../styles/hero.css";
 const Hero = (prop) => {
 	return (
 		<div className="hero-section section" ref={prop.aboutRef}>
-			<Content contactRef={prop.contactRef} />
+			<Content contactRef={prop.contactRef} footerRef={prop.footerRef} />
 		</div>
 	);
 };
@@ -50,7 +50,7 @@ const Content = (prop) => {
 				</button>
 				<button onClick={onButtonClick}>Download CV</button>
 			</div>
-			<ul className="links">
+			<ul className="links" ref={prop.footerRef}>
 				<li>
 					<a href="mailto:m.alejandro.xvii@gmail.com">
 						m.alejandro.xvii@gmail.com

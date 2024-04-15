@@ -1,5 +1,5 @@
 .project-container {
-	height: 50vw;
+	min-height: fit-content;
 	margin-bottom: 5rem;
 	display: grid;
 	grid-template-columns: 1fr 1.5fr;
@@ -50,10 +50,20 @@
 .stack-list {
 	display: flex;
 	gap: 0.5rem;
+	flex-wrap: wrap;
 	li {
 		background-color: var(--clr-light-black);
 		padding: 0.5rem 1rem;
 		border-radius: 1rem;
 		color: var(--clr-light-white);
+	}
+}
+
+@media (max-width: 1060px) {
+	.project-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
