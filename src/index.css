@@ -232,7 +232,7 @@ p {
 
 @media (max-width: 1060px) {
 	.section {
-		padding: 0 min(5rem, 3vw);
+		padding: 0 min(5rem, 7vw);
 	}
 }
 

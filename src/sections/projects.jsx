@@ -114,7 +114,7 @@ const Project = (prop) => {
 				<ul className="project-links">
 					<li>
 						<a href={prop.liveLink}>
-							Live<span>→</span>
+							Live<span className="arrow">→</span>
 						</a>
 					</li>
 					<li>

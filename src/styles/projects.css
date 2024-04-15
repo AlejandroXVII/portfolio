@@ -27,10 +27,13 @@
 	.project-links {
 		a {
 			color: var(--clr-principal);
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 			text-decoration: none;
+			display: flex;
+			gap: 5rem;
 		}
-		span {
+		.arrow {
+			display: contents;
 			font-size: 2.5rem;
 		}
 		li {
