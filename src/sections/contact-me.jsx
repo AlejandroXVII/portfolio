@@ -28,7 +28,38 @@ const ContactMe = (prop) => {
 				<span className="number">04.</span>Contact Me
 			</h1>
 			<div className="contact-me-container">
+				<form ref={form} onSubmit={sendEmail}>
+					<h2>Send me an email</h2>
+					<InputComponent>
+						<label htmlFor="text">Name</label>
+						<input
+							name="from_name"
+							type="text"
+							required
+							placeholder=" "
+						/>
+					</InputComponent>
+					<InputComponent>
+						<label htmlFor="text">Email</label>
+						<input
+							name="from_email"
+							type="email"
+							required
+							placeholder=" "
+						/>
+					</InputComponent>
+					<textarea
+						name="message"
+						type="text"
+						required
+						placeholder="Message"
+					/>
+
+					<button>Submit</button>
+				</form>
+
 				<div className="info">
+					<h2>See more</h2>
 					<ul className="links">
 						<li>
 							<a href="https://github.com/AlejandroXVII?tab=repositories">
@@ -65,36 +96,6 @@ const ContactMe = (prop) => {
 						</li>
 					</ul>
 				</div>
-				<form ref={form} onSubmit={sendEmail}>
-					<InputComponent>
-						<label htmlFor="text">Name</label>
-						<input
-							name="from_name"
-							type="text"
-							required
-							placeholder=" "
-						/>
-					</InputComponent>
-					<InputComponent>
-						<label htmlFor="text">Email</label>
-						<input
-							name="from_email"
-							type="email"
-							required
-							placeholder=" "
-						/>
-					</InputComponent>
-					<InputComponent>
-						<label htmlFor="text">Message</label>
-						<input
-							name="message"
-							type="text"
-							required
-							placeholder=" "
-						/>
-					</InputComponent>
-					<button>Submit</button>
-				</form>
 			</div>
 		</div>
 	);

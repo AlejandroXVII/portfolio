@@ -7,11 +7,17 @@
 			font-size: 1.5rem;
 		}
 	}
+	h2 {
+		text-align: center;
+		margin: 1rem 0;
+		color: var(--clr-light-black);
+	}
 }
 .contact-me-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
 	align-items: center;
+	justify-items: center;
 	gap: 0.5rem;
 }
 
@@ -54,6 +60,7 @@
 		position: relative;
 		overflow: hidden;
 		background-color: var(--clr-light-white);
+		min-width: 300px;
 	}
 	.input-container:focus-within {
 		outline: 2px solid var(--clr-principal);
@@ -62,6 +69,18 @@
 			transform: translateY(0) scale(0.85);
 			left: 1rem;
 		}
+	}
+	textarea {
+		padding: 1rem;
+		min-height: 100px;
+	}
+	textarea::placeholder {
+		color: var(--clr-light-black);
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 1rem;
+	}
+	textarea:focus {
+		outline: 2px solid var(--clr-principal);
 	}
 	label {
 		color: var(--clr-light-black);
@@ -78,13 +97,14 @@
 		color: var(--clr-light-white);
 		padding: 1rem 2.5rem;
 		align-self: start;
+		margin: 0;
 	}
 }
 
 .info {
 	ul.links {
 		display: flex;
-		flex-flow: column;
+		flex-flow: row;
 		align-items: end;
 		gap: 1.5rem;
 		font-size: 3rem;
