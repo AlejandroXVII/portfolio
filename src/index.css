@@ -237,7 +237,7 @@ p {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
 	.header {
 		transform: translateY(-100px);
 	}
