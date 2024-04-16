@@ -17,9 +17,23 @@
 
 	svg {
 		width: 100%;
+		transform: scale(1);
+		transition: transform 0.2s ease-in-out;
 	}
+
 	p {
 		text-align: center;
+	}
+}
+.icon-container:hover {
+	border-color: var(--clr-principal);
+	p {
+		color: var(--clr-principal);
+	}
+	svg {
+		fill: var(--clr-principal);
+		transform: scale(1.1);
+		transition: transform 0.2s ease-in-out;
 	}
 }
 
