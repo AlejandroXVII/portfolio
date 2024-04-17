@@ -125,7 +125,7 @@ const Header = (prop) => {
 					</a>
 				</li>
 				<li>
-					<a href={cv} download="cv">
+					<a href={cv} target="_blank" rel="noreferrer">
 						Resume
 					</a>
 				</li>

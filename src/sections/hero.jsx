@@ -10,13 +10,7 @@ const Hero = (prop) => {
 
 const Content = (prop) => {
 	const onButtonClick = () => {
-		const pdfUrl = "../assets/cv.pdf";
-		const link = document.createElement("a");
-		link.href = pdfUrl;
-		link.download = "cv.pdf";
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
+		window.open("src/assets/cv.pdf", "_blank");
 	};
 	return (
 		<div className="hero-content">
@@ -48,7 +42,7 @@ const Content = (prop) => {
 				>
 					Contact me
 				</button>
-				<button onClick={onButtonClick}>Download CV</button>
+				<button onClick={onButtonClick}>Open Résumé</button>
 			</div>
 			<ul className="links" ref={prop.footerRef}>
 				<li>

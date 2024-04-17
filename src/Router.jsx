@@ -9,10 +9,6 @@ const Router = () => {
 			element: <App />,
 			errorElement: <ErrorPage />,
 		},
-		/*{
-			path: "profile",
-			element: <Profile />,
-		},*/
 	]);
 
 	return <RouterProvider router={router} />;
